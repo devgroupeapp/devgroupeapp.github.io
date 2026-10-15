@@ -3,619 +3,365 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="Terms of Use for Taybaat – نظام الطيبات للدكتور العوضي"
-  >
-
+  <meta name="description" content="Terms of Use for Taybaat – نظام الطيبات: a food, meal-planning and fasting companion. Informational only, not medical advice.">
+  <meta name="theme-color" content="#14422D">
   <title>Terms of Use – Taybaat</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@500;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --canvas: #F7F1E8; --surface: #FFFFFF; --sunken: #EFE8DC; --hairline: #E1DCD3;
+      --ink: #1C1B1A; --ink-2: #4A4741; --ash: #6B6966;
+      --primary: #14422D; --primary-c: #D6E6D3; --on-primary-c: #0E2E1F;
+      --gold: #AF751B; --gold-c: #F5E7C8; --on-gold-c: #4A3605;
+      --sage-c: #E3E8D6; --on-sage-c: #2C3A2D;
+      --shadow: 0 2px 8px rgba(28,27,26,.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --canvas: #161513; --surface: #211F1C; --sunken: #2B2925; --hairline: #3A3732;
+        --ink: #F2EDE4; --ink-2: #C9C3B8; --ash: #A9A398;
+        --primary: #9FCFB2; --primary-c: #24402F; --on-primary-c: #CDE8D5;
+        --gold: #DDAA61; --gold-c: #3A2C12; --on-gold-c: #F5E7C8;
+        --sage-c: #26302A; --on-sage-c: #D6E2CF;
+        --shadow: none;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f8fafc;
-      color: #222;
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.7;
+      margin: 0; background: var(--canvas); color: var(--ink);
+      font-family: "IBM Plex Sans Arabic", "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased;
     }
+    a { color: var(--primary); text-underline-offset: 3px; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
 
-    header {
-      background: linear-gradient(135deg, #2563eb, #10b981);
-      color: white;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
+    .topbar { border-bottom: 1px solid var(--hairline); background: var(--canvas); position: sticky; top: 0; z-index: 10; }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 60px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--ink); text-decoration: none; }
+    .brand .mark { width: 34px; height: 34px; border-radius: 50%; background: var(--primary); color: var(--canvas); display: grid; place-items: center; font-family: "Noto Naskh Arabic", serif; font-size: 18px; }
+    .tabs { display: flex; gap: 6px; }
+    .tabs a { padding: 7px 14px; border-radius: 999px; text-decoration: none; color: var(--ink-2); font-size: 15px; font-weight: 500; border: 1px solid transparent; }
+    .tabs a[aria-current="page"] { background: var(--primary-c); color: var(--on-primary-c); }
+    .tabs a:not([aria-current]):hover { border-color: var(--hairline); }
+
+    .hero { padding: 56px 0 28px; }
+    .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--on-sage-c); background: var(--sage-c); padding: 4px 12px; border-radius: 999px; }
+    h1 { font-family: "Noto Naskh Arabic", Georgia, serif; font-weight: 600; font-size: clamp(34px, 5vw, 48px); line-height: 1.25; margin: 14px 0 6px; }
+    .hero .sub { color: var(--ink-2); margin: 0; }
+    .meta { margin-top: 14px; color: var(--ash); font-size: 15px; }
+
+    .glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 8px 0 36px; }
+    .card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 24px; padding: 20px; box-shadow: var(--shadow); }
+    .glance .card h3 { margin: 10px 0 4px; font-size: 17px; }
+    .glance .card p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+    .icon { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--sage-c); color: var(--on-sage-c); }
+    .icon.gold { background: var(--gold-c); color: var(--gold); }
+    .icon.green { background: var(--primary-c); color: var(--on-primary-c); }
+    .icon svg { width: 20px; height: 20px; }
+
+    .layout { display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: start; padding-bottom: 48px; }
+    nav.toc { position: sticky; top: 80px; font-size: 14px; }
+    nav.toc p { font-weight: 600; margin: 0 0 8px; color: var(--ash); font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
+    nav.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: toc; }
+    nav.toc li { counter-increment: toc; }
+    nav.toc a { display: block; padding: 5px 10px; border-radius: 10px; color: var(--ink-2); text-decoration: none; }
+    nav.toc a::before { content: counter(toc) ". "; color: var(--ash); }
+    nav.toc a:hover { background: var(--sunken); color: var(--ink); }
+
+    article section { background: var(--surface); border: 1px solid var(--hairline); border-radius: 24px; padding: 26px 28px; margin-bottom: 16px; box-shadow: var(--shadow); scroll-margin-top: 80px; }
+    article h2 { font-family: "Noto Naskh Arabic", Georgia, serif; font-weight: 600; font-size: 26px; line-height: 1.35; margin: 0 0 10px; }
+    article h2 .n { color: var(--gold); margin-inline-end: 8px; }
+    article h3 { font-size: 18px; margin: 22px 0 6px; }
+    article p { margin: 10px 0; color: var(--ink); }
+    article ul { margin: 10px 0; padding-inline-start: 22px; }
+    article li { margin: 6px 0; }
+    .note { background: var(--sage-c); color: var(--on-sage-c); border-radius: 16px; padding: 14px 18px; margin: 14px 0; }
+    .note.gold { background: var(--gold-c); color: var(--on-gold-c); }
+    .note strong { display: block; margin-bottom: 2px; }
+    .new { font-size: 12px; font-weight: 600; background: var(--gold-c); color: var(--on-gold-c); padding: 2px 8px; border-radius: 999px; vertical-align: middle; margin-inline-start: 6px; }
+
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+    th, td { text-align: start; padding: 10px 12px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+    th { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--ash); font-weight: 600; }
+    td:first-child { font-weight: 500; }
+    .pill { display: inline-block; font-size: 13px; padding: 2px 10px; border-radius: 999px; background: var(--primary-c); color: var(--on-primary-c); white-space: nowrap; }
+
+    .ar { direction: rtl; text-align: right; font-size: 17px; }
+    .ar h2 { font-size: 28px; }
+
+    .contact { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 999px; background: var(--primary); color: var(--canvas); text-decoration: none; font-weight: 600; }
+    .btn.outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
+
+    footer { border-top: 1px solid var(--hairline); padding: 28px 0 40px; color: var(--ash); font-size: 14px; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    footer a { color: var(--ink-2); }
+
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
+      nav.toc { position: static; background: var(--surface); border: 1px solid var(--hairline); border-radius: 20px; padding: 16px; }
+      article section { padding: 22px 18px; }
+      .tabs a { padding: 6px 10px; font-size: 14px; }
+      .brand span { display: none; }
     }
-
-    header h1 {
-      margin: 0.5rem 0;
-    }
-
-    header p {
-      margin: 0.35rem 0;
-      opacity: 0.95;
-    }
-
-    section {
-      background: white;
-      padding: 20px;
-      margin-top: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.08);
-    }
-
-    h2 {
-      color: #1e293b;
-      margin-top: 0;
-    }
-
-    h3 {
-      color: #334155;
-    }
-
-    .important {
-      background: #fff7ed;
-      border-left: 4px solid #f97316;
-      padding: 15px;
-      border-radius: 6px;
-      margin: 15px 0;
-    }
-
-    .notice {
-      background: #eff6ff;
-      border-left: 4px solid #2563eb;
-      padding: 15px;
-      border-radius: 6px;
-      margin: 15px 0;
-    }
-
-    ul {
-      margin-top: 10px;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 20px;
-      padding: 20px;
-      color: #666;
-      font-size: 0.9rem;
+    @media print {
+      .topbar, nav.toc, .contact { display: none; }
+      body { background: #fff; color: #000; font-size: 12pt; }
+      .layout { display: block; }
+      article section, .card { box-shadow: none; border: 0; padding: 0; margin-bottom: 18px; }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>Terms of Use</h1>
-  <p><strong>Taybaat – نظام الطيبات للدكتور العوضي</strong></p>
-  <p>Developed by AmineDev</p>
-  <p>Last Updated: September 6, 2026</p>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark">ط</span><span>Taybaat – نظام الطيبات</span></a>
+    <nav class="tabs" aria-label="Legal documents">
+      <a href="https://devgroupeapp.github.io/privacy-policy-tayibat.html">Privacy</a>
+      <a href="https://devgroupeapp.github.io/Terms-and-conditions-tayibat.html" aria-current="page">Terms</a>
+    </nav>
+  </div>
 </header>
 
-
-<section>
-  <h2>1. Acceptance of Terms</h2>
-
-  <p>
-    By downloading, installing, accessing, or using
-    <strong>Taybaat – نظام الطيبات للدكتور العوضي</strong>
-    ("Taybaat", "the App", or "the application"), you agree to be bound by
-    these Terms of Use.
-  </p>
-
-  <p>
-    If you do not agree with these Terms, you should not use the application.
-  </p>
-
-  <p>
-    These Terms of Use should be read together with the Taybaat Privacy
-    Policy, which explains how information is handled within the application.
-  </p>
-</section>
-
-
-<section>
-  <h2>2. Purpose of the Application</h2>
-
-  <p>
-    Taybaat is designed to provide food-related information and tools that
-    may help users organize food choices, meal plans, personal food lists,
-    shopping lists, fasting preferences, meal history, and related planning
-    activities.
-  </p>
-
-  <p>
-    The application may provide food classifications, quantities, meal
-    planning suggestions, organization tools, and other informational
-    features.
-  </p>
-
-  <div class="important">
-    <strong>Taybaat is an informational and organizational tool.</strong>
-    It is not intended to replace professional medical, nutritional, or
-    healthcare advice.
-  </div>
-</section>
-
-
-<section>
-  <h2>3. Health and Medical Disclaimer</h2>
-
-  <p>
-    Taybaat does not provide medical diagnosis, medical treatment, or
-    personalized medical care.
-  </p>
-
-  <p>
-    Information, classifications, recommendations, meal-planning features,
-    fasting-related information, and other content provided through the
-    application are for general informational and organizational purposes
-    only.
-  </p>
-
-  <p>
-    The application should not be used as a substitute for advice,
-    diagnosis, or treatment from a qualified physician, registered dietitian,
-    nutrition professional, pharmacist, or other qualified healthcare
-    professional.
-  </p>
-
-  <p>
-    If you have a medical condition, food allergy, food intolerance,
-    medication-related dietary restriction, eating disorder, pregnancy or
-    breastfeeding-related dietary concern, or any other health concern,
-    consult an appropriately qualified healthcare professional before
-    changing your diet or fasting practices.
-  </p>
-
-  <p>
-    Never delay seeking professional medical care because of information
-    provided by Taybaat.
-  </p>
-
-  <p>
-    In an emergency or situation requiring immediate medical attention,
-    contact the appropriate local emergency service or healthcare provider.
-  </p>
-</section>
-
-
-<section>
-  <h2>4. User Responsibility</h2>
-
-  <p>
-    You are responsible for how you use the information and features
-    provided by Taybaat.
-  </p>
-
-  <p>
-    You are responsible for considering your individual circumstances,
-    dietary requirements, allergies, health conditions, medications, and
-    professional advice before acting on food or meal-related information.
-  </p>
-
-  <p>
-    You should independently verify information that is important to your
-    health or safety.
-  </p>
-
-  <p>
-    Taybaat does not guarantee that a particular food, quantity, meal,
-    classification, or recommendation is appropriate for every individual.
-  </p>
-</section>
-
-
-<section>
-  <h2>5. Food Information and Classifications</h2>
-
-  <p>
-    Taybaat contains a built-in food database and related classifications
-    used by the application's features.
-  </p>
-
-  <p>
-    Food classifications, quantities, categories, recommendations, and
-    related information may not account for every individual's dietary,
-    medical, cultural, religious, allergy, or nutritional circumstances.
-  </p>
-
-  <p>
-    Food information may also change over time due to differences in
-    preparation, ingredients, serving sizes, brands, and other factors.
-  </p>
-
-  <p>
-    Users should verify product labels, ingredient lists, allergen
-    information, and other relevant information when necessary.
-  </p>
-</section>
-
-
-<section>
-  <h2>6. Fasting Features</h2>
-
-  <p>
-    Taybaat may provide features for organizing or planning fasting-related
-    activities.
-  </p>
-
-  <p>
-    These features are intended for planning and informational purposes and
-    do not constitute medical advice or medical supervision.
-  </p>
-
-  <p>
-    Fasting may be inappropriate or unsafe for certain individuals. Users
-    should consult a qualified healthcare professional before fasting if
-    they have a medical condition, take medication, are pregnant or
-    breastfeeding, or have another circumstance that could make fasting
-    unsuitable.
-  </p>
-</section>
-
-
-<section>
-  <h2>7. License to Use the Application</h2>
-
-  <p>
-    Subject to these Terms, AmineDev grants you a limited, personal,
-    non-exclusive, non-transferable, non-sublicensable license to install
-    and use Taybaat on compatible devices for lawful personal use.
-  </p>
-
-  <p>
-    This license does not transfer ownership of the application or any
-    intellectual property rights to you.
-  </p>
-</section>
-
-
-<section>
-  <h2>8. Acceptable Use</h2>
-
-  <p>
-    You agree to use Taybaat only for lawful purposes and in accordance
-    with these Terms.
-  </p>
-
-  <p>You must not:</p>
-
-  <ul>
-    <li>
-      Use the application for unlawful, fraudulent, or harmful purposes.
-    </li>
-
-    <li>
-      Attempt to interfere with, disrupt, damage, or gain unauthorized access
-      to the application or its underlying systems.
-    </li>
-
-    <li>
-      Reverse engineer, decompile, disassemble, or otherwise attempt to
-      derive the source code of the application except where expressly
-      permitted by applicable law.
-    </li>
-
-    <li>
-      Circumvent security, technical, or access-control mechanisms.
-    </li>
-
-    <li>
-      Use automated methods to abuse or interfere with the application's
-      functionality.
-    </li>
-
-    <li>
-      Reproduce, redistribute, sell, sublicense, or commercially exploit
-      the application or its proprietary content without authorization.
-    </li>
-  </ul>
-</section>
-
-
-<section>
-  <h2>9. User Data and Local Storage</h2>
-
-  <p>
-    Taybaat stores certain user-created information locally on the user's
-    device, including information associated with meal planning, shopping
-    lists, favorites, history, preferences, and other application features.
-  </p>
-
-  <p>
-    Taybaat does not provide users with an online account or a Taybaat cloud
-    database for storing this information.
-  </p>
-
-  <p>
-    You are responsible for maintaining your device and any backups you
-    choose to create.
-  </p>
-
-  <p>
-    You understand that deleting application data, uninstalling the
-    application, changing devices, device failure, or other operating-system
-    events may result in loss of locally stored information.
-  </p>
-</section>
-
-
-<section>
-  <h2>10. Privacy</h2>
-
-  <p>
-    Your use of Taybaat is also governed by our
-    <a href="https://dyouri.com/taybaat/privacy">
-      Privacy Policy
-    </a>.
-  </p>
-
-  <p>
-    The Privacy Policy explains the application's local data storage,
-    Google's consent-management technology, advertising technology, and
-    other relevant privacy practices.
-  </p>
-</section>
-
-
-<section>
-  <h2>11. Advertising and Consent Technology</h2>
-
-  <p>
-    Taybaat includes Google's User Messaging Platform (UMP) and Google
-    Mobile Ads (AdMob) technology as part of its advertising and consent
-    infrastructure.
-  </p>
-
-  <div class="notice">
-    <strong>Advertising is currently disabled.</strong>
-    The current version of Taybaat does not display advertisements or make
-    advertising requests.
+<main id="top" class="wrap">
+  <div class="hero">
+    <span class="eyebrow">Legal · Terms</span>
+    <h1>Terms of Use</h1>
+    <p class="sub"><strong>Taybaat – نظام الطيبات للدكتور العوضي</strong> · Android app by AmineDev</p>
+    <p class="meta">Last updated: October 15, 2026 · Effective immediately</p>
   </div>
 
-  <p>
-    If advertising is enabled in a future version, advertisements and
-    related processing may be provided through Google AdMob and may be
-    subject to applicable consent requirements.
-  </p>
+  <div class="glance" aria-label="Terms at a glance">
+    <div class="card">
+      <div class="icon gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
+      <h3>Not medical advice</h3>
+      <p>Taybaat is an information and planning tool. Ask a qualified professional before changing your diet or fasting.</p>
+    </div>
+    <div class="card">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <h3>Times are calculated</h3>
+      <p>Suhoor and iftar times are astronomical estimates. Follow your local official timetable when they differ.</p>
+    </div>
+    <div class="card">
+      <div class="icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5z"/><path d="M8 7h6"/><path d="M8 11h6"/></svg></div>
+      <h3>Classifications can vary</h3>
+      <p>Food classifications follow the system's published lists and may not suit every person or product.</p>
+    </div>
+    <div class="card">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
+      <h3>Your data is local</h3>
+      <p>Everything you create stays on your device, so keep your phone and backups safe.</p>
+    </div>
+  </div>
 
-  <p>
-    Privacy and consent choices associated with Google's services may be
-    managed through the application's Privacy Options functionality where
-    applicable.
-  </p>
+  <div class="layout">
+    <nav class="toc" aria-label="Contents">
+      <p>Contents</p>
+      <ol>
+        <li><a href="#acceptance">Acceptance</a></li>
+        <li><a href="#purpose">Purpose of the app</a></li>
+        <li><a href="#health">Health disclaimer</a></li>
+        <li><a href="#responsibility">Your responsibility</a></li>
+        <li><a href="#food">Food classifications</a></li>
+        <li><a href="#fasting">Fasting &amp; prayer times</a></li>
+        <li><a href="#location">Location feature</a></li>
+        <li><a href="#planner">Meal planner</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#license">License</a></li>
+        <li><a href="#acceptable">Acceptable use</a></li>
+        <li><a href="#data">Local data</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#ads">Advertising &amp; consent</a></li>
+        <li><a href="#ip">Intellectual property</a></li>
+        <li><a href="#third">Third-party services</a></li>
+        <li><a href="#availability">Availability &amp; updates</a></li>
+        <li><a href="#warranty">No warranties</a></li>
+        <li><a href="#liability">Limitation of liability</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#law">Governing law</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#ar">ملخص بالعربية</a></li>
+      </ol>
+    </nav>
 
-  <p>
-    Google's services are subject to Google's own terms and privacy
-    practices.
-  </p>
-</section>
+    <article>
+      <section id="acceptance">
+        <h2><span class="n">1</span>Acceptance of these Terms</h2>
+        <p>By downloading, installing or using <strong>Taybaat – نظام الطيبات للدكتور العوضي</strong> ("Taybaat", "the app"), you agree to these Terms of Use. If you do not agree, please do not use the app.</p>
+        <p>These Terms should be read together with the <a href="https://devgroupeapp.github.io/privacy-policy-tayibat.html">Taybaat Privacy Policy</a>, which explains how information is handled in the app.</p>
+      </section>
 
+      <section id="purpose">
+        <h2><span class="n">2</span>Purpose of the app</h2>
+        <p>Taybaat helps you check foods against the system's classifications, read explanations and alternatives, plan meals for a day or a week, follow a fasting schedule with suhoor and iftar times and reminders, and turn your plan into a shopping list.</p>
+        <div class="note gold">
+          <strong>Taybaat is an informational and organisational tool.</strong>
+          It does not replace professional medical, nutritional or religious advice.
+        </div>
+      </section>
 
-<section>
-  <h2>12. Intellectual Property</h2>
+      <section id="health">
+        <h2><span class="n">3</span>Health and medical disclaimer</h2>
+        <p>Taybaat does not provide medical diagnosis, treatment or personalised medical care. Classifications, explanations, meal suggestions, portions, fasting information and all other content are for general information and planning only.</p>
+        <p>Do not use the app as a substitute for advice from a physician, registered dietitian, pharmacist or other qualified professional. If you have a medical condition, allergy or intolerance, take medication, are pregnant or breastfeeding, have or have had an eating disorder, or have any other health concern, consult a qualified professional before changing your diet or fasting.</p>
+        <p>Never delay seeking medical care because of something you read in Taybaat. In an emergency, contact your local emergency services.</p>
+      </section>
 
-  <p>
-    Taybaat, including its software, branding, visual design, logos,
-    original interface elements, organization, and proprietary application
-    content, is owned by or licensed to AmineDev and is protected by
-    applicable intellectual property laws.
-  </p>
+      <section id="responsibility">
+        <h2><span class="n">4</span>Your responsibility</h2>
+        <p>You are responsible for how you use the information and features in Taybaat, and for taking into account your own circumstances, dietary needs, allergies, health conditions, medication and professional advice. Please check independently any information that matters to your health or safety. Taybaat does not guarantee that a food, portion, meal or recommendation is right for every person.</p>
+      </section>
 
-  <p>
-    Except for the limited license granted in these Terms, no rights to the
-    application's intellectual property are transferred to you.
-  </p>
+      <section id="food">
+        <h2><span class="n">5</span>Food information and classifications</h2>
+        <p>Taybaat contains a built-in food database. Its classifications (allowed, conditional, forbidden, not yet verified), explanations and frequency guidance are based on the lists of the Tayyibat system as publicly published on <a href="https://altayebaat.com" target="_blank" rel="noopener noreferrer">altayebaat.com</a>, as understood and organised by the developer. Foods that do not appear on those lists are marked as not yet verified.</p>
+        <p>Classifications can contain mistakes, may change when the published lists change, and may not reflect every recipe, brand, ingredient, preparation method or regional name. Always read product labels, ingredient lists and allergen information. Food names in Moroccan Darija and other languages are translations provided for convenience.</p>
+      </section>
 
-  <p>
-    You may not copy, reproduce, modify, distribute, sell, or create
-    derivative works from proprietary Taybaat content without appropriate
-    authorization.
-  </p>
-</section>
+      <section id="fasting">
+        <h2><span class="n">6</span>Fasting features and prayer times <span class="new">Updated</span></h2>
+        <p>Taybaat lets you choose a fasting schedule (for example Monday and Thursday, or the white days), shows suhoor and iftar times, counts down to them and can remind you before them.</p>
+        <p>Suhoor and iftar times are <strong>calculated on your device</strong> from your chosen city or approximate location, using the calculation method selected automatically for your country or chosen by you. They are estimates. They can differ by a few minutes from the official timetable of your country, your local mosque or announcements, especially near the edge of a time zone, at high latitudes or when daylight-saving rules change.</p>
+        <div class="note gold">
+          <strong>When in doubt, follow your local official timetable.</strong>
+          AmineDev is not responsible for the validity of a fast or of any act of worship based on the times shown in the app.
+        </div>
+        <p>Reminders depend on Android delivering notifications; battery-saving modes, permissions or device settings can delay or block them. Fasting may be unsuitable for some people; see section 3.</p>
+      </section>
 
+      <section id="location">
+        <h2><span class="n">7</span>Location feature <span class="new">New</span></h2>
+        <p>Using your location is optional. If you choose "Use my location", the app asks Android for approximate location to find your nearest city for the fasting times. You can instead choose a city from the list. Accuracy depends on your device and network, and the nearest listed city may not be your exact town. How location is handled is described in the Privacy Policy.</p>
+      </section>
 
-<section>
-  <h2>13. Third-Party Services</h2>
+      <section id="planner">
+        <h2><span class="n">8</span>Meal planner and shopping list</h2>
+        <p>Generated meals, portions and shopping quantities are automatic suggestions built from the food database and simple rules (for example meal type, food role and how often a food is allowed). They are a starting point you can edit; they are not a nutritional prescription and do not take into account calories, allergies or medical needs.</p>
+      </section>
 
-  <p>
-    Taybaat may use third-party services necessary to provide specific
-    application functionality, including Google's User Messaging Platform
-    and Google Mobile Ads technology.
-  </p>
+      <section id="languages">
+        <h2><span class="n">9</span>Languages</h2>
+        <p>The app is available in Arabic, Moroccan Darija, English, French and Spanish. These Terms are written in English, and the Arabic summary at the end is provided for convenience. If there is a difference between versions, the English text applies.</p>
+      </section>
 
-  <p>
-    Your use of third-party services may also be subject to the terms and
-    policies of those third parties.
-  </p>
+      <section id="license">
+        <h2><span class="n">10</span>License to use the app</h2>
+        <p>Subject to these Terms, AmineDev grants you a limited, personal, non-exclusive, non-transferable, non-sublicensable license to install and use Taybaat on compatible devices for lawful personal use. This license does not transfer ownership of the app or of any intellectual property to you.</p>
+      </section>
 
-  <p>
-    AmineDev does not control the policies, availability, or operation of
-    third-party services.
-  </p>
-</section>
+      <section id="acceptable">
+        <h2><span class="n">11</span>Acceptable use</h2>
+        <p>You agree to use Taybaat only lawfully and in line with these Terms. You must not:</p>
+        <ul>
+          <li>use the app for unlawful, fraudulent or harmful purposes;</li>
+          <li>interfere with, disrupt or try to gain unauthorised access to the app or its systems;</li>
+          <li>reverse engineer, decompile or disassemble the app, except where the law expressly allows it;</li>
+          <li>bypass security, technical or access-control measures;</li>
+          <li>use automated means to abuse or interfere with the app;</li>
+          <li>copy, redistribute, sell, sublicense or commercially exploit the app or its proprietary content without permission.</li>
+        </ul>
+      </section>
 
+      <section id="data">
+        <h2><span class="n">12</span>Your data and local storage</h2>
+        <p>Taybaat stores what you create (your name, meal plans, shopping lists, favourites, history, fasting settings, location choice and preferences) locally on your device. There is no Taybaat account or cloud database.</p>
+        <p>You are responsible for your device and any backups you choose to make. Clearing the app's data, uninstalling, changing or losing your phone, or a device failure can permanently erase this information.</p>
+      </section>
 
-<section>
-  <h2>14. Application Availability and Updates</h2>
+      <section id="privacy">
+        <h2><span class="n">13</span>Privacy</h2>
+        <p>Your use of Taybaat is also governed by our <a href="https://devgroupeapp.github.io/privacy-policy-tayibat.html">Privacy Policy</a>, which explains local storage, the optional location feature, notifications, Google's consent technology and advertising technology.</p>
+      </section>
 
-  <p>
-    Taybaat is provided on an "as available" basis.
-  </p>
+      <section id="ads">
+        <h2><span class="n">14</span>Advertising and consent technology</h2>
+        <p>Taybaat includes Google's User Messaging Platform (UMP) and Google Mobile Ads (AdMob) as part of its consent and advertising infrastructure.</p>
+        <div class="note">
+          <strong>Advertising is currently disabled.</strong>
+          The current version does not display ads or make ad requests.
+        </div>
+        <p>If advertising is enabled in a future version, ads may be provided through Google AdMob subject to applicable consent requirements, and you can manage choices in the app's Privacy Options where available. Google's services are subject to Google's own terms and privacy practices.</p>
+      </section>
 
-  <p>
-    We may update, modify, improve, suspend, or discontinue parts of the
-    application at any time.
-  </p>
+      <section id="ip">
+        <h2><span class="n">15</span>Intellectual property</h2>
+        <p>Taybaat's software, visual design, interface, organisation, translations and original content are owned by or licensed to AmineDev and protected by intellectual-property law. Names, lists and materials of the Tayyibat system referred to in the app belong to their respective owners. The bundled fonts (IBM Plex Sans Arabic and Noto Naskh Arabic) are used under the SIL Open Font License 1.1.</p>
+        <p>Except for the limited license above, no rights are transferred to you, and you may not copy, modify, distribute or create derivative works from proprietary Taybaat content without permission.</p>
+      </section>
 
-  <p>
-    Updates may include security improvements, bug fixes, feature changes,
-    content changes, compatibility improvements, or changes required by
-    applicable laws and third-party platform requirements.
-  </p>
+      <section id="third">
+        <h2><span class="n">16</span>Third-party services</h2>
+        <p>Taybaat uses third-party components where needed, including Google's User Messaging Platform and Google Mobile Ads technology, and Android system services for notifications and approximate location. Your use of them may also be subject to their own terms and policies. AmineDev does not control their policies, availability or operation.</p>
+      </section>
 
-  <p>
-    We do not guarantee that every feature will remain available
-    indefinitely or that the application will be compatible with every
-    device or future version of Android.
-  </p>
-</section>
+      <section id="availability">
+        <h2><span class="n">17</span>Availability and updates</h2>
+        <p>Taybaat is provided on an "as available" basis. We may update, change, suspend or discontinue parts of the app at any time, for example to fix bugs, improve security, update the food database or classifications, change features, or meet legal and platform requirements. We do not guarantee that every feature will remain available or that the app will work on every device or future version of Android.</p>
+      </section>
 
+      <section id="warranty">
+        <h2><span class="n">18</span>Disclaimer of warranties</h2>
+        <p>To the maximum extent permitted by law, Taybaat is provided <strong>"as is"</strong> and <strong>"as available"</strong>, without warranties of any kind, express, implied or statutory. We do not warrant that the app will be uninterrupted or error-free, that food information or classifications will be complete or accurate, that calculated suhoor and iftar times will match official timetables, or that the app will meet your individual dietary, medical or religious needs.</p>
+      </section>
 
-<section>
-  <h2>15. Disclaimer of Warranties</h2>
+      <section id="liability">
+        <h2><span class="n">19</span>Limitation of liability</h2>
+        <p>To the maximum extent permitted by law, AmineDev is not liable for indirect, incidental, special, consequential, exemplary or punitive damages arising from your use of, or inability to use, Taybaat. This includes loss of locally stored data, missed or late reminders, differences between calculated and official prayer times, device issues, and reliance on the app's informational content.</p>
+        <p>Nothing in these Terms excludes or limits liability that cannot lawfully be excluded or limited.</p>
+      </section>
 
-  <p>
-    To the maximum extent permitted by applicable law, Taybaat is provided
-    on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis,
-    without warranties of any kind, whether express, implied, statutory, or
-    otherwise.
-  </p>
+      <section id="changes">
+        <h2><span class="n">20</span>Changes to these Terms</h2>
+        <p>We may update these Terms when the app, the law or platform requirements change. The latest version is published on this page, and the date at the top shows when it was last updated. Continuing to use Taybaat after an update means you accept the updated Terms, to the extent permitted by law.</p>
+        <p><strong>What changed on October 15, 2026:</strong> new sections on prayer-time calculation, the optional location feature, the meal planner and languages; the source of food classifications; the bundled fonts; and the corrected Privacy Policy link.</p>
+      </section>
 
-  <p>
-    We do not warrant that the application will always be uninterrupted,
-    error-free, completely accurate, or available on every device.
-  </p>
+      <section id="termination">
+        <h2><span class="n">21</span>Termination</h2>
+        <p>You may stop using Taybaat at any time by uninstalling it. We may restrict, suspend or discontinue access to the app where reasonably necessary for security, legal, technical or operational reasons.</p>
+      </section>
 
-  <p>
-    We do not warrant that information provided by the application will
-    satisfy every user's individual dietary, nutritional, medical, or other
-    requirements.
-  </p>
-</section>
+      <section id="law">
+        <h2><span class="n">22</span>Governing law</h2>
+        <p>These Terms are interpreted under the laws applicable to the developer and to your use of the app, without depriving you of any mandatory consumer-protection rights you have under the laws of your country of residence.</p>
+      </section>
 
+      <section id="contact">
+        <h2><span class="n">23</span>Contact</h2>
+        <p>For questions, feedback or requests about these Terms:</p>
+        <p><strong>Developer:</strong> AmineDev<br><strong>Email:</strong> <a href="mailto:devgroupeapp@gmail.com">devgroupeapp@gmail.com</a></p>
+        <div class="contact">
+          <a class="btn" href="mailto:devgroupeapp@gmail.com?subject=Taybaat%20terms">Email us</a>
+          <a class="btn outline" href="https://devgroupeapp.github.io/privacy-policy-tayibat.html">Read the Privacy Policy</a>
+        </div>
+      </section>
 
-<section>
-  <h2>16. Limitation of Liability</h2>
-
-  <p>
-    To the maximum extent permitted by applicable law, AmineDev shall not be
-    liable for indirect, incidental, special, consequential, exemplary, or
-    punitive damages arising out of or relating to your use of, or inability
-    to use, Taybaat.
-  </p>
-
-  <p>
-    This includes, without limitation, loss of locally stored data,
-    interruption of service, device-related issues, or reliance on
-    informational content provided by the application.
-  </p>
-
-  <p>
-    Nothing in these Terms is intended to exclude or limit liability that
-    cannot lawfully be excluded or limited under applicable law.
-  </p>
-</section>
-
-
-<section>
-  <h2>17. Changes to These Terms</h2>
-
-  <p>
-    We may update these Terms of Use from time to time to reflect changes
-    to Taybaat, applicable laws, platform requirements, or our services.
-  </p>
-
-  <p>
-    The latest version will be published on this webpage.
-  </p>
-
-  <p>
-    The date shown at the top of these Terms indicates when they were most
-    recently updated.
-  </p>
-
-  <p>
-    Your continued use of Taybaat after an updated version becomes available
-    constitutes acceptance of the updated Terms to the extent permitted by
-    applicable law.
-  </p>
-</section>
-
-
-<section>
-  <h2>18. Termination</h2>
-
-  <p>
-    You may stop using Taybaat at any time by uninstalling the application
-    or ceasing to use it.
-  </p>
-
-  <p>
-    We may restrict, suspend, or discontinue access to the application where
-    reasonably necessary, including for security, legal, technical, or
-    operational reasons.
-  </p>
-</section>
-
-
-<section>
-  <h2>19. Governing Law</h2>
-
-  <p>
-    These Terms shall be interpreted and applied in accordance with the
-    applicable laws governing the developer and the user's use of the
-    application, subject to any mandatory consumer-protection or other
-    rights that cannot legally be excluded.
-  </p>
-
-  <p>
-    Nothing in these Terms is intended to deprive consumers of protections
-    that are mandatory under the laws applicable to them.
-  </p>
-</section>
-
-
-<section>
-  <h2>20. Contact</h2>
-
-  <p>
-    If you have questions, concerns, feedback, or requests regarding these
-    Terms of Use, please contact us:
-  </p>
-
-  <p>
-    <strong>Developer:</strong> AmineDev<br>
-    <strong>Email:</strong>
-    <a href="mailto:devgroupeapp@gmail.com">
-      devgroupeapp@gmail.com
-    </a>
-  </p>
-
-  <p>
-    <strong>Privacy Policy:</strong>
-    <a href="https://devgroupeapp.github.io/privacy-policy-tayibat.html">
-      Privacy-Policy-Tayibat
-    </a>
-    <br>
-
-    <strong>Terms of Use:</strong>
-    <a href="https://devgroupeapp.github.io/Terms-and-conditions-tayibat.html">
-      Terms-And-Conditions-Tayibat
-    </a>
-  </p>
-</section>
-
+      <section id="ar" class="ar" lang="ar">
+        <h2>ملخص شروط الاستخدام</h2>
+        <p>هذا ملخص مبسط، والنص الإنجليزي أعلاه هو المرجع.</p>
+        <ul>
+          <li>طيبات أداة للمعلومات وتنظيم الوجبات، وليست بديلاً عن استشارة الطبيب أو أخصائي التغذية. استشر مختصاً قبل تغيير نظامك الغذائي أو الصيام إذا كانت لديك حالة صحية.</li>
+          <li>تصنيفات الأطعمة مبنية على القوائم المنشورة لنظام الطيبات على موقع altayebaat.com، وقد تحتوي على أخطاء أو تتغير. اقرأ مكونات المنتج دائماً.</li>
+          <li>أوقات السحور والإفطار محسوبة فلكياً على جهازك وقد تختلف ببضع دقائق عن التقويم الرسمي في بلدك. عند الاختلاف اتّبع التوقيت الرسمي المحلي.</li>
+          <li>بياناتك محفوظة على هاتفك فقط؛ حذف التطبيق أو بياناته قد يمحوها نهائياً.</li>
+          <li>الإعلانات معطلة حالياً.</li>
+          <li>للتواصل: <a href="mailto:devgroupeapp@gmail.com">devgroupeapp@gmail.com</a></li>
+        </ul>
+      </section>
+    </article>
+  </div>
+</main>
 
 <footer>
-  &copy; 2026 AmineDev. All Rights Reserved.
+  <div class="wrap">
+    <span>&copy; 2026 AmineDev. All rights reserved.</span>
+    <span><a href="https://devgroupeapp.github.io/privacy-policy-tayibat.html">Privacy Policy</a> · <a href="https://devgroupeapp.github.io/Terms-and-conditions-tayibat.html">Terms of Use</a></span>
+  </div>
 </footer>
 
 </body>
