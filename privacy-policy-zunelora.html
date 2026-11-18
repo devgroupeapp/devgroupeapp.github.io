@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Zunelora: Sleep Sounds &amp; Rain, by AmineDev.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0A0F1F">
+  <title>Privacy Policy — Zunelora</title>
+  <style>
+:root {
+  --bg: #0A0F1F;
+  --card: #121A35;
+  --card-2: #172042;
+  --text: #EAEEFB;
+  --muted: #A3ACC9;
+  --label: #8E98B8;
+  --accent: #C3B2FF;
+  --link: #9DB8FF;
+  --moon: #F4C98E;
+  --border: #26315A;
+  --shadow: 0 14px 36px rgba(0, 0, 0, .35);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image: radial-gradient(1200px 520px at 50% -180px, rgba(195, 178, 255, .10), transparent 70%);
+  background-repeat: no-repeat;
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.72;
+}
+.page {
+  width: min(920px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 44px 0 64px;
+}
+.header {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(150deg, #121A42 0%, #1D1E4A 55%, #2B2357 100%);
+  border: 1px solid #2A3463;
+  color: var(--text);
+  border-radius: 22px;
+  padding: 34px 34px 30px;
+  box-shadow: var(--shadow);
+  margin-bottom: 22px;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -80px;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(195, 178, 255, .22), rgba(195, 178, 255, 0) 65%);
+  pointer-events: none;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  position: relative;
+}
+.mark { width: 56px; height: 56px; flex: none; }
+.brand {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.brand small {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: none;
+  color: var(--muted);
+}
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(30px, 5vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  position: relative;
+}
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  position: relative;
+}
+.updated {
+  margin-top: 18px;
+  display: inline-flex;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(195, 178, 255, .12);
+  border: 1px solid rgba(195, 178, 255, .25);
+  color: var(--text);
+  font-size: 13px;
+  position: relative;
+}
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+}
+.toc a {
+  display: inline-block;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  text-decoration: none;
+}
+.toc a:hover { color: var(--text); border-color: #3A4680; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 30px 32px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  scroll-margin-top: 16px;
+}
+h2 {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 21px;
+  line-height: 1.3;
+}
+h3 {
+  margin: 20px 0 8px;
+  font-size: 16px;
+  color: var(--text);
+}
+p { margin: 0 0 12px; }
+p:last-child { margin-bottom: 0; }
+ul, ol { margin: 8px 0 14px 22px; padding: 0; }
+li { margin: 5px 0; }
+li::marker { color: var(--accent); }
+strong { color: #F4F6FD; }
+.muted { color: var(--muted); }
+.notice {
+  background: linear-gradient(135deg, rgba(195, 178, 255, .10), rgba(157, 184, 255, .06));
+  border: 1px solid rgba(195, 178, 255, .22);
+  border-left: 4px solid var(--moon);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 16px 0 0;
+}
+.notice strong:first-child { color: var(--moon); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 14px 0 6px;
+}
+.grid div {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 14px;
+  background: var(--card-2);
+  font-size: 15px;
+}
+.grid strong {
+  display: block;
+  font-size: 12px;
+  color: var(--label);
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+.meta div {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 14px;
+  background: var(--card-2);
+}
+.meta strong {
+  display: block;
+  font-size: 12px;
+  color: var(--label);
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+a { color: var(--link); text-underline-offset: 2px; }
+a:hover { color: #C9D7FF; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.footer {
+  text-align: center;
+  color: var(--label);
+  font-size: 13px;
+  padding-top: 10px;
+}
+@media (max-width: 640px) {
+  .page { width: min(100% - 20px, 920px); padding-top: 20px; }
+  .header { padding: 26px 22px 24px; border-radius: 18px; }
+  .card { padding: 23px 20px; border-radius: 16px; }
+  .meta, .grid { grid-template-columns: 1fr; }
+  .mark { width: 48px; height: 48px; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="header">
+    <div class="header-top">
+      <svg class="mark" viewBox="24.52 21.44 58.95 58.53" role="img" aria-label="Zunelora crescent and soundwave"><defs><linearGradient id="zs0fill" gradientUnits="userSpaceOnUse" x1="31.95" y1="22.39" x2="67.23" y2="57.67"><stop offset="0" stop-color="#FFF1D6" stop-opacity="1"/><stop offset="1" stop-color="#F4C98E" stop-opacity="1"/></linearGradient><linearGradient id="zs2stroke" gradientUnits="userSpaceOnUse" x1="27.54" y1="0" x2="80.46" y2="0"><stop offset="0" stop-color="#9DB8FF" stop-opacity="1"/><stop offset="1" stop-color="#C3B2FF" stop-opacity="1"/></linearGradient></defs><path d="M48.29,22.44 A17.64,17.64 0 1,0 65.33,47.99 A15.44,15.44 0 0,1 48.29,22.44 Z" fill="url(#zs0fill)"/><path d="M27.54,68.38 C33.21,65.73 37.62,71.03 43.29,68.38 M64.71,68.38 C70.38,65.73 74.79,71.03 80.46,68.38 M47.07,65.55 L47.07,71.22 M50.85,62.71 L50.85,74.05 M54.63,59.81 L54.63,76.95 M58.41,62.71 L58.41,74.05 M62.19,65.55 L62.19,71.22" fill="none" stroke="#1D1E4A" stroke-opacity="1" stroke-width="4.03" stroke-linecap="round"/><path d="M27.54,68.38 C33.21,65.73 37.62,71.03 43.29,68.38 M64.71,68.38 C70.38,65.73 74.79,71.03 80.46,68.38 M47.07,65.55 L47.07,71.22 M50.85,62.71 L50.85,74.05 M54.63,59.81 L54.63,76.95 M58.41,62.71 L58.41,74.05 M62.19,65.55 L62.19,71.22" fill="none" stroke="url(#zs2stroke)" stroke-width="2.05" stroke-linecap="round"/></svg>
+      <div class="brand">Zunelora<small>Sleep Sounds &amp; Rain · by AmineDev</small></div>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">How Zunelora handles information and protects your privacy.</p>
+    <div class="updated">Effective and last updated: November 18, 2026</div>
+  </header>
+
+  <nav aria-label="Sections">
+    <ul class="toc">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#device">On your device</a></li>
+      <li><a href="#age">Age</a></li>
+      <li><a href="#ads">Advertising</a></li>
+      <li><a href="#analytics">Analytics</a></li>
+      <li><a href="#choices">Your choices</a></li>
+      <li><a href="#sharing">Sharing</a></li>
+      <li><a href="#retention">Retention &amp; deletion</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="card" id="overview">
+    <h2>1. Overview</h2>
+    <p>Zunelora is an Android application that plays relaxing sounds for sleep, rest and quiet moments. You can mix up to eight sounds, save mixes, keep favorites, set a sleep timer that fades out gently and set a bedtime reminder. All sounds are included in the app and play offline.</p>
+    <p>Zunelora is free and supported by advertising. On Google Play it is intended for adults (18 and over).</p>
+    <div class="notice">
+      <strong>In short.</strong> Zunelora has no account and never asks for your name, email address, contacts, photos, files or location. Your mixes, favorites and settings stay on your device. If you are 18 or older, the app shows ads through Google AdMob, and uses Yandex AppMetrica app analytics only when analytics is allowed; in the EEA, the UK and Switzerland you choose first, and you can change your mind at any time. If you are under 18, or before you answer the age question, the app shows no ads, does not start the advertising or analytics services and sends no data about you.
+    </div>
+    <div class="grid" aria-label="Who uses what">
+      <div><strong>Under 18 or age not given</strong>No ads, no analytics, no consent request</div>
+      <div><strong>Adults in the EEA, UK, Switzerland</strong>Ads and analytics according to your consent choices</div>
+      <div><strong>Adults elsewhere</strong>Ads; analytics on unless you uninstall or contact us</div>
+    </div>
+  </section>
+
+  <section class="card" id="device">
+    <h2>2. Information Stored on Your Device</h2>
+    <p>Zunelora uses local storage on your device for its features:</p>
+    <ul>
+      <li><strong>Saved mixes</strong>, <strong>favorite sounds</strong>, sound volumes and the last mix you played;</li>
+      <li><strong>Sleep timer</strong> and fade-out settings;</li>
+      <li><strong>Bedtime reminder</strong> time and days. Reminders are scheduled by your phone; no server is involved;</li>
+      <li><strong>Your age group</strong> (adult or under 18), described in Section 3;</li>
+      <li><strong>Your privacy choices</strong>, recorded on your device by Google's consent tool (Section 6).</li>
+    </ul>
+    <p>The developer cannot access this information. Zunelora does not operate an account, cloud storage or synchronization service.</p>
+  </section>
+
+  <section class="card" id="age">
+    <h2>3. Your Age</h2>
+    <p>When you first open Zunelora, the app asks for your year of birth so that the right privacy settings apply. Your answer is self-reported: the app does not check it and does not ask for proof of age. Only the resulting group (adult or under 18) is kept, on your device. Your year of birth is not stored or sent anywhere.</p>
+    <ul>
+      <li><strong>18 or older:</strong> advertising and analytics may be used as described in Sections 4 to 6.</li>
+      <li><strong>Under 18:</strong> you can use every feature. The app shows no ads, does not start the Google Mobile Ads SDK or AppMetrica, does not contact Google's consent service and sends no data about you.</li>
+      <li><strong>Before you answer:</strong> nothing is started and nothing is sent. You cannot reach the main screen without answering.</li>
+    </ul>
+    <p class="muted">The advertising and analytics libraries are part of the app package, so Android loads some of their components when the app opens. For users under 18 and users who have not answered, the app does not start these services, and in our tests no network requests were made.</p>
+  </section>
+
+  <section class="card" id="ads">
+    <h2>4. Advertising (Google AdMob)</h2>
+    <p>For users aged 18 or older, Zunelora shows banner and app-open ads through Google AdMob. No ads appear on the player screen, and no full-screen ad appears while a mix is playing or paused. According to Google's documentation, the Google Mobile Ads SDK collects:</p>
+    <ul>
+      <li><strong>Device and account identifiers:</strong> the Android advertising ID, the app set ID and, where applicable, identifiers related to accounts signed in on the device;</li>
+      <li><strong>IP address</strong>, which may be used to estimate your general location;</li>
+      <li><strong>Product interactions</strong>, such as app launches, taps and ad views;</li>
+      <li><strong>Diagnostic information</strong>, such as app launch time, hang rate and energy use.</li>
+    </ul>
+    <p>Google uses and shares this data for advertising, analytics and fraud prevention, and encrypts it in transit. The app declares the advertising ID permission and Android's ad-services permissions (Privacy Sandbox), which Google's ads services may use on supported Android versions; you can control these in your device settings.</p>
+    <p>Learn more: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use its services</a>, the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener noreferrer">Google Mobile Ads SDK data disclosure</a>. You can manage ad personalization in <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">My Ad Center</a>.</p>
+  </section>
+
+  <section class="card" id="analytics">
+    <h2>5. App Analytics (Yandex AppMetrica)</h2>
+    <p>AppMetrica helps us understand how the app is used and fix crashes. Zunelora starts AppMetrica only if you are 18 or older <strong>and</strong> analytics is allowed:</p>
+    <ul>
+      <li>in the EEA, the UK and Switzerland, only if you consented to storing information on your device and to measurement;</li>
+      <li>elsewhere, for adults once the consent check has completed.</li>
+    </ul>
+    <p>If you refuse, AppMetrica is never started and sends nothing. If you withdraw consent, it stops sending app activity and crash reports immediately and is not started again on later launches. At the moment of withdrawal AppMetrica may send Yandex one final technical notice recording that sending was turned off. Crashes that happen while analytics is off are not stored for later and are not sent if you consent again. When it is on, AppMetrica collects:</p>
+    <ul>
+      <li><strong>Crash reports and diagnostics</strong>, for example the operating system version, screen type and battery level at the time of a crash, and which Android permissions the app has been granted. AppMetrica also runs Yandex's own internal diagnostics for its SDK, only while it is on;</li>
+      <li><strong>App activity:</strong> screens opened and in-app actions such as playing or saving a mix, setting the timer or opening Settings. Nothing you type is sent;</li>
+      <li><strong>Device or other identifiers</strong>, which may include the advertising ID, and how the app was installed (Google Play install referrer, for example &ldquo;organic&rdquo; or the name of a campaign). The install referrer is read only while AppMetrica is on.</li>
+    </ul>
+    <p>AppMetrica does not collect your location in Zunelora: location tracking is not enabled and the app has no location permission. According to Yandex, data is encrypted in transit.</p>
+    <p>Learn more: <a href="https://yandex.com/legal/confidential/en/" target="_blank" rel="noopener noreferrer">Yandex Privacy Policy</a>, <a href="https://appmetrica.yandex.com/docs/en/data-security/google-data-safety" target="_blank" rel="noopener noreferrer">AppMetrica data safety information</a> and <a href="https://appmetrica.yandex.com/docs/en/data-security/gdpr" target="_blank" rel="noopener noreferrer">AppMetrica and the GDPR</a>.</p>
+  </section>
+
+  <section class="card" id="choices">
+    <h2>6. Your Choices and Consent</h2>
+    <p>In the EEA, the UK and Switzerland, Zunelora uses Google's User Messaging Platform, an IAB TCF consent tool, to ask for your choices before personalized advertising and analytics. You can:</p>
+    <ul>
+      <li><strong>Consent</strong> to the listed purposes and partners;</li>
+      <li><strong>Refuse</strong> (&ldquo;Do not consent&rdquo;): analytics stays off. Google's consent tool records your choice, and Google decides which ads can still be shown. Google states that ads shown without consent use no personal data for personalization; the app does not choose the ad type and we cannot independently confirm the type of each ad;</li>
+      <li><strong>Manage options</strong> for individual purposes and partners.</li>
+    </ul>
+    <p>You can review or withdraw your choices at any time in the app under <strong>Settings &gt; Privacy choices</strong>, which appears when the consent tool applies to you. Analytics follows your new choice immediately.</p>
+    <p>On any device you can also reset or delete your advertising ID in your device settings (for example Settings &gt; Privacy &gt; Ads; labels vary by manufacturer), turn the bedtime reminder off, block notifications, or uninstall the app to stop all data collection.</p>
+  </section>
+
+  <section class="card" id="permissions">
+    <h2>7. Permissions</h2>
+    <ul>
+      <li><strong>Internet and network state:</strong> for ads, the consent tool and analytics (adults only). Sounds play without a connection.</li>
+      <li><strong>Notifications:</strong> playback controls and the bedtime reminder.</li>
+      <li><strong>Foreground media playback and wake lock:</strong> to keep your sounds playing with the screen off.</li>
+      <li><strong>Run at startup:</strong> to restore the bedtime reminder after your phone restarts.</li>
+      <li><strong>Advertising ID, ad-services and install-referrer permissions:</strong> added by the Google and Yandex libraries; used only for adults as described in Sections 4 and 5.</li>
+    </ul>
+    <p>Zunelora does not request access to your location, contacts, camera, microphone, photos or files.</p>
+  </section>
+
+  <section class="card" id="notcollected">
+    <h2>8. Information We Do Not Collect</h2>
+    <ul>
+      <li>No account registration or sign-in, and no request for your name, email address or phone number;</li>
+      <li>No precise or approximate location from your device's location services, no contacts, photos, files or recordings;</li>
+      <li>No health, fitness or sleep-tracking data. Zunelora does not measure your sleep;</li>
+      <li>No data from users under 18 or before the age question is answered.</li>
+    </ul>
+    <p class="muted">Zunelora does collect data for adults through the services described in Sections 4 and 5.</p>
+  </section>
+
+  <section class="card" id="sharing">
+    <h2>9. Sharing and Disclosure</h2>
+    <p>We do not sell your personal information. Data leaves your device only through the third-party services described above, for adults, under their own privacy policies:</p>
+    <ul>
+      <li><strong>Google</strong>: AdMob advertising and the User Messaging Platform consent tool;</li>
+      <li><strong>Yandex</strong>: AppMetrica app analytics.</li>
+    </ul>
+    <p>We may disclose information if required by law, or to protect the rights, safety or security of users or others.</p>
+  </section>
+
+  <section class="card" id="retention">
+    <h2>10. Data Retention and Deletion</h2>
+    <p>We do not run our own servers and do not keep a copy of your data. Google and Yandex retain the data they receive under their own policies linked above, and their processing may take place outside your country with the safeguards described in those policies.</p>
+    <ul>
+      <li><strong>On your device:</strong> delete saved mixes and remove favorites in the app, clear the app's data in Android settings, or uninstall the app;</li>
+      <li><strong>Analytics data:</strong> email us (Section 15) with the subject &ldquo;Delete my data&rdquo; and we will ask Yandex to delete the AppMetrica data linked to your device;</li>
+      <li><strong>Advertising data:</strong> managed by Google. Reset or delete your advertising ID and use the Google links in Section 4.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="backup">
+    <h2>11. Android Device Backup</h2>
+    <p>Zunelora permits Android's system backup. Depending on Android, your device manufacturer, your Google Account or other backup provider, and your device settings, your saved mixes, favorites, settings, age group and privacy choices may be included in a device backup and restored on a new device. AppMetrica's local data is kept in a folder that Android excludes from backups.</p>
+    <p>Zunelora does not control Android's backup service. Deleting data on the device does not necessarily remove copies already in a backup; use your device's backup settings to manage them.</p>
+  </section>
+
+  <section class="card" id="children">
+    <h2>12. Children and Minors</h2>
+    <p>Zunelora is intended for adults and is not directed to children. Users who indicate they are under 18 can use the app without ads or analytics, and no data about them is collected or sent. If you believe a minor has provided personal data, contact us and we will help remove it.</p>
+  </section>
+
+  <section class="card" id="security">
+    <h2>13. Security</h2>
+    <p>Your mixes, favorites and settings are processed and stored locally. Data sent by the advertising and analytics services is encrypted in transit, as described by Google and Yandex. You are responsible for protecting access to your Android device and for reviewing your device and backup security settings.</p>
+    <p>Zunelora is a relaxation app. It is not a medical device and does not diagnose or treat any condition.</p>
+  </section>
+
+  <section class="card" id="changes">
+    <h2>14. Changes to This Privacy Policy</h2>
+    <p>This Privacy Policy may be updated when the application or its data practices change. The date at the top of this page shows the current version. Significant changes will be highlighted in the app or on its Google Play listing before they take effect.</p>
+  </section>
+
+  <section class="card" id="contact">
+    <h2>15. Contact</h2>
+    <p>For questions about this privacy policy or to request deletion of your data, contact the developer:</p>
+    <div class="meta">
+      <div><strong>Developer / Legal Entity</strong><span>AmineDev</span></div>
+      <div><strong>Privacy Contact</strong><a href="mailto:devgroupeapp@gmail.com">devgroupeapp@gmail.com</a></div>
+      <div><strong>Application</strong><span>Zunelora: Sleep Sounds &amp; Rain (Android)</span></div>
+      <div><strong>Effective Date</strong><span>November 18, 2026</span></div>
+    </div>
+  </section>
+
+  <div class="footer">© 2026 AmineDev. Zunelora. All rights reserved.</div>
+</main>
+</body>
+</html>
